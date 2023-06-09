@@ -86,9 +86,6 @@
                         </li>
 
 
-
-
-
 						<li class="treeview">
                             <a href="#">
                                <i class="fa fa-building"></i>
@@ -100,6 +97,12 @@
 								<li><a href="admin.php?action=transactionHistory"><i class="fa fa-angle-double-right"></i> Transaction History</a></li>
 								<li><a href="admin.php?action=listBooks"><i class="fa fa-angle-double-right"></i> Manage Books</a></li>
                             </ul>
+                        </li>
+
+                        <li>
+                            <a href="admin.php?action=attendanceRecord">
+                                <i class="fa fa-address-card"></i> <span>Manage Student Attendance</span>
+                            </a>
                         </li>
 
                         <li>

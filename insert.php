@@ -15,12 +15,12 @@ $conn = new mysqli($server,$username,$password,$dbname);
    $voice = new com("SAPI.SpVoice");
    $text =$_POST['text'];
    $date =date('Y-m-d');
-   $time =date('H:i:s');
+   $time = date_create('now', timezone_open('Asia/Manila'))->format('Y-m-d h:i:s A');
 
    $sql = "SELECT * FROM studattendance WHERE STUDENTID='$text' AND LOGDATE='$date' AND STATUS='0'"; //0 means wala silang time out pero may in
    $query=$conn->query($sql);
    if($query->num_rows>0){
-     $sql ="UPDATE studattendance SET TIMEOUT=NOW(), STATUS='1' WHERE STUDENTID='$text' AND LOGDATE='$date'";//time in and out
+     $sql ="UPDATE studattendance SET TIMEOUT='$time', STATUS='1' WHERE STUDENTID='$text' AND LOGDATE='$date'";//time in and out
       $query=$conn->query($sql);
        $_SESSION['success'] ='Successfully time out';
 

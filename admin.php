@@ -126,6 +126,9 @@ if(!$user->isLoggedIn()) {
 			case 'editUser':
 				require('admin/editUser.php');
 			break;
+			case 'attendanceRecord':
+				require('admin/attendanceRecord.php');
+			break;
 
 		  default:
 			require('admin/ldashboard.php');
